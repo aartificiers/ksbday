@@ -1,0 +1,106 @@
+.homepage {
+    width: 100vw;
+    height: 100vh;
+    border: 4px solid white;
+
+    .home-wrap {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: url("https://res.cloudinary.com/artificier/image/upload/v1753793775/Untitled_design_vgcv3u.png");
+        background-size: cover;
+        background-position: center;
+
+        .wishes {
+            width: 100%;
+            height: 100%;
+
+            .wish-wrap {
+                width: 100%;
+                height: 100%;
+                padding: 25px;
+                position: relative;
+                .nxtbtn{
+                    padding: 8px 16px;
+                    border: 3px solid black;
+                    font-family: var(--myfont);
+                    position: absolute;
+                    right: 30px;
+                    bottom: 140px;
+                    text-decoration: none;
+                    border-radius: 25px;
+                    font-weight: 900;
+                    color: black;
+                    text-decoration: none;
+                }
+
+
+
+                .pic-frame {
+                    width: 200px;
+                    height: 250px;
+                    background: white;
+                    position: absolute;
+                    padding: 10px;
+                    display: flex;
+                    justify-content: center;
+                    flex-direction: column;
+                    // animation: rota 3s 3s infinite alternate-reverse ease;
+
+                    &::before{
+                        content: "";
+                        width: 40px;
+                        height: 40px;
+                        background: url("https://res.cloudinary.com/artificier/image/upload/v1753793712/Untitled_design_1_ovrpnm.png");
+                        background-size: cover;
+                        background-position: center;
+                        position: absolute;
+                        top: 10px;
+                        left: 50%;
+                        transform: translate(-50%,0);
+
+                    }
+
+                    img {
+                        width: 100%;
+                        height: 90%;
+                        object-fit: cover;
+                        object-position: center;
+                    }
+
+                    h3 {
+                        color: black;
+                        font-family: var(--myfont);
+                    }
+
+                    &:nth-child(1) {
+                        top: 55px;
+                        left: 50px;
+                        rotate: 10deg;
+                    }
+
+                    &:nth-child(2) {
+                        top: 300px;
+                        left: 200px;
+                        rotate: 346deg;
+                    }
+
+                    &:nth-child(3) {
+                        top: 550px;
+                        left: 50px;
+                        rotate: 352deg;
+                    }
+                    
+
+                }
+
+
+
+            }
+
+        }
+    }
+}
+

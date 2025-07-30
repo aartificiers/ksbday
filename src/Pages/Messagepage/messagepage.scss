@@ -1,0 +1,145 @@
+.mymesage {
+    width: 100vw;
+    height: 100svh;
+
+    .msg-wrap {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: url("https://res.cloudinary.com/artificier/image/upload/v1753878381/Untitled_design_3_fom9uv.png");
+        background-size: cover;
+        background-position: center;
+
+        .envelop {
+            width: 90%;
+            height: 90%;
+            // border: 1px solid black;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            padding: 25px;
+
+            .envelop-head {
+                width: 300px;
+                height: 200px;
+                // border: 2px solid black;
+                border-radius: 10px;
+                background: url("https://res.cloudinary.com/artificier/image/upload/v1753878810/Untitled_design_4_peca3x.png");
+                background-size: cover;
+                position: relative;
+                z-index: 5;
+                overflow: hidden;
+                box-shadow: -1px 13px 35px -5px rgba(77, 77, 77, 0.5);
+                -webkit-box-shadow: -1px 13px 35px -5px rgba(77, 77, 77, 0.5);
+                -moz-box-shadow: -1px 13px 35px -5px rgba(77, 77, 77, 0.5);
+                animation: rota 3s infinite alternate-reverse ease;
+
+                &:hover{
+                    scale: 0.9;
+                    transition: .6s ease;
+                }
+
+
+                &::after {
+                    content: "";
+                    width: 353px;
+                    height: 353px;
+                    border: 1px solid rgba(160, 160, 160, 0.329);
+                    position: absolute;
+                    rotate: 45deg;
+                    top: -280px;
+                    left: -28px;
+                    background: rgb(240, 212, 212);
+                    border-radius: 20px;
+                }
+
+                &::before {
+                    content: "Open Me";
+                    border: 1px solid rgba(160, 160, 160, 0.329);
+                    position: absolute;
+                    bottom: 30px;
+                    padding: 3px;
+                    font-family: var(--myfont);
+                    left: 50%;
+                    translate: -50% 0 0;
+                    background: rgb(240, 212, 212);
+                    border-radius: 20px;
+                }
+            }
+
+            .msgs {
+                width: 250px;
+                height: 150px;
+                position: absolute;
+                top: 70%;
+                left: 50%;
+                translate: -50% 0 0;
+                padding: 15px;
+                background: url("https://res.cloudinary.com/artificier/image/upload/v1753881654/Untitled_design_5_kfnooh.png");
+                background-size: cover;
+                background-position: center;
+                // border: 1px solid #ccc;
+                opacity: 0;
+                transition: opacity 0.4s ease, top 0.4s ease;
+
+                &.m1{
+                    &.visible{
+                        top:5%;
+                        rotate: -10deg;
+                        transition: 2s ease;
+                        opacity: 1;
+                    }
+                }
+                &.m2{
+                    &.visible{
+                        top:10%;
+                        rotate: 10deg;
+                        transition: 2s ease;
+                        opacity: 1;
+                    }
+                }
+                &.m3{
+                    &.visible{
+                        top:15%;
+                        rotate: -10deg;
+                        transition: 2s ease;
+                        opacity: 1;
+                    }
+                }
+                &.m4{
+                    &.visible{
+                        top:20%;
+                        rotate: 10deg;
+                        transition: 2s ease;
+                        opacity: 1;
+                    }
+                }
+
+                &.visible {
+
+                    opacity: 1;
+                    top: 20%;
+                    transition: 2s ease;
+
+                }
+
+            }
+        }
+        .ltsgo{
+            padding: 8px 16px;
+            // border: 1px solid black;
+            color: rgb(255, 255, 255);
+            position: absolute;
+            text-decoration: none;
+            background: rgba(27, 27, 27, 0.726);
+            font-family: var(--myfont);
+            font-size: 1.3rem;
+            border-radius: 25px;
+            transition: all 1s ease;
+        
+        }
+    }
+}

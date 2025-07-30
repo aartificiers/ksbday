@@ -1,0 +1,130 @@
+.scroll-container {
+  position: relative;
+  height: 100vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  background: linear-gradient(135deg, #f4f4f4, #580000);
+}
+
+.fixed-layer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 10;
+
+  .cake-canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; // allows scroll
+    transition: all 1.5s ease-in-out;
+  }
+
+  .click-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    z-index: 15;
+    pointer-events: auto;
+  }
+
+  .instructions,
+  .scroll-instruction {
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 0.8rem;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 10px 20px;
+    border-radius: 10px;
+    animation: pulse 2s infinite;
+    z-index: 20;
+    text-align: center;
+  }
+
+  .scroll-instruction {
+    display: none;
+  }
+
+  .confetti-canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 5;
+    pointer-events: none;
+    display: none;
+  }
+}
+
+.birthday-content {
+  position: relative;
+  min-height: 300vh;
+  padding-top: 100vh;
+
+  .spacer {
+    height: 100vh;
+    width: 100%;
+  }
+
+  .letter {
+    position: absolute;
+    width: 70%;
+    right: -100%;
+    top: 50%;
+    transform: translateY(-50%) rotate(0deg);
+    background-color: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    transition: all 1s ease-in-out;
+    max-height: 70vh;
+    overflow-y: auto;
+    z-index: 50;
+    h1{
+        font-size: 1.5rem;
+        font-family: var(--myfont);
+    }
+    p{
+        font-family: var(--myfont);
+    }
+  }
+  a{
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    text-decoration: none;
+    background: white;
+    padding: 6px 18px;
+    border-radius: 25px;
+    color: rgb(216, 82, 104);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: translateX(-50%) scale(1);
+  }
+  50% {
+    transform: translateX(-50%) scale(1.05);
+  }
+  100% {
+    transform: translateX(-50%) scale(1);
+  }
+}
